@@ -1,0 +1,36 @@
+.login{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: rgb(231, 229, 229);
+}
+
+.login > .login__logoContainer > .MuiSvgIcon-root {
+    font-size: 300px !important;
+    color: rgba(5, 238, 129, 0.733) !important;
+}
+
+.login > .login__logoContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.login > .login__logoContainer > .login__text{
+    color: rgba(5, 238, 129, 0.733) !important;
+    font-weight: 600;
+    font-size: 50px;
+    padding-left: 45px;
+}
+
+.login > .login__btn{
+    width: 400px;
+    background-color: rgba(5, 238, 129, 0.733);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.7s all;
+}
+
+.login > .login__btn:hover{
+    color: rgba(5, 238, 129, 0.733) !important;
+}

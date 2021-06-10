@@ -1,0 +1,85 @@
+.message-sender{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-right: 15px;
+    width: 850px;
+}
+
+.message-sender__top{
+    display: flex;
+    border-bottom: 1px solid #eff2f5;
+    padding-bottom: 15px;
+    padding: 15px;
+    align-items: center;
+}
+
+.message-sender__top > form{
+    flex: 1;
+    display: flex;
+}
+
+.message-sender__top > form > input{
+    outline: none;
+    border: none;
+    padding: 5px 20px;
+    margin: 0px 10px;
+    border-radius: 999px;
+    background-color: #eff2f5;
+}
+
+.message-sender__file{
+    display: none;
+}
+
+.message-sender__top > form > button{
+    color: rgba(5, 238, 129, 0.733) !important;
+    background-color: #fff;
+    font-weight: 700;
+    border: none;
+    outline: none; 
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s all;
+    margin: 5px;
+}
+
+.message-sender__top > form > button:hover{
+    background-color: lightgray;
+    color: white !important;
+    transform: scale(1.2);
+}
+
+.message-sender__inputText{
+    flex: 1;
+}
+
+.message-sender__bottom{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.message-sender__option{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.4s all ease-in-out;
+}
+
+.message-sender__option:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.3);
+}
+
+.message-sender__option > h4{
+    font-size: medium;
+    margin: 10px;
+}

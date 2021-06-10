@@ -1,0 +1,74 @@
+.post{
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.3);
+}
+
+.post__img > img{
+    width: 100%;
+}
+
+.post__top{
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 10px;
+}
+
+.post__avatar{
+    margin-right: 15px;
+}
+
+.post__topInfo > h4{
+    font-size: medium;
+}
+
+.post__topInfo > p{
+    font-size: small;
+    color: rgb(128, 127, 127);
+}
+
+.post__bottom{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px 25px;
+}
+
+.post__options{
+    padding: 5px;
+    border-top: 1px solid rgb(209, 207, 207);
+    display: flex;
+    justify-content: space-evenly;
+    font-size: medium;
+    color: rgb(122, 120, 120);
+}
+
+.post__option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    float: 1;
+    transition: 0.4s all;
+    cursor: pointer !important;
+    z-index: 3;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+
+.post__option:hover{
+    cursor: pointer !important;
+    transform: scale(1.2);
+}
+
+.post__option > p {
+    margin-left: 10px !important;
+    cursor: pointer !important;
+}
+
+.post__option > .MuiSvgIcon-root{
+    color: rgb(2, 126, 2) !important;
+    margin-right: 10px !important;
+}

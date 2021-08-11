@@ -1,13 +1,20 @@
-import React, { useState, useEffect } from 'react';
+// imports
+import React, { 
+    useState, 
+    useEffect
+} from 'react';
 import StoryReel from './StoryReel';
 import MessageSender from './MessageSender';
 import Post from './Post';
 import '../css/Feed.css';
 import db from '../firebase';
 
+// component
 const Feed = () => {
-    const [posts, setPosts] = useState([]);
+    // states
+    const [posts, setPosts] = useState<Array<any>>([]);
 
+    // getting the data
     useEffect(()=>{
         db.collection("posts").onSnapshot(s => {
             setPosts(
@@ -21,6 +28,7 @@ const Feed = () => {
     ,[]
     );
 
+    // feed template
     return (
         <div
         className='feed'
@@ -31,7 +39,8 @@ const Feed = () => {
                 posts.map(post => 
                 (<Post 
                 key={post.id}
-                profilePic={post.data.profilePic}
+                // @ts-ignore
+                profilePic={post.data.profilePic as any}
                 username={post.data.username}
                 timeStamp={post.data.timeStamp}
                 message={post.data.message}

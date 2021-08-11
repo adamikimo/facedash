@@ -1,18 +1,28 @@
-import React, { useState, useRef } from 'react';
+// imports
+import React, { 
+    useState, 
+    useRef 
+} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import '../css/MessageSender.css';
+import { 
+    useStateValue 
+} from '../StateProvider';
+import db from '../firebase';
+import firebase from 'firebase';
+
+// icons from material-ui
 import VideocamIcon from '@material-ui/icons/Videocam';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 
-import { useStateValue } from '../StateProvider';
-import db from '../firebase';
-import firebase from 'firebase';
-
-
+// component
 const MessageSender: React.FC = () => {
+    // using the custom hook
     const [{ user }, dispatch] = useStateValue();
+    // state
     const [input, setInput] = useState('');
+    // handle submit function
     const handleSubmit = (e: any)=> {
         e.preventDefault();
         db.collection("posts").add({
@@ -22,6 +32,8 @@ const MessageSender: React.FC = () => {
             username: user.displayName,
         });
     }
+    
+    // template
     return (
         <div
         className='message-sender'

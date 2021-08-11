@@ -1,5 +1,7 @@
+// imports
 import firebase from 'firebase';
 
+// firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCA-7B665Z_N_f5FjcEjCJ1KwRhztJPmrk",
     authDomain: "fb-mern-backend2.firebaseapp.com",
@@ -11,11 +13,13 @@ const firebaseConfig = {
     measurementId: "G-XRYCV19XHF"
 };
 
+// init the firebase app
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
-const FacebookProvider = new firebase.auth.FacebookAuthProvider();
 
+// exporting the firebase authentication and the google authentication provider
+//... and the database
 export { auth, provider };
 export default db;

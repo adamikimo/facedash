@@ -1,17 +1,30 @@
+// imports
 import React from 'react'
 import BubbleChartIcon from '@material-ui/icons/BubbleChart';
 import Button from '@material-ui/core/Button';
 import '../css/Login.css';
-import { auth, provider } from '../firebase';
-import { actionTypes } from '../reducer';
-import { useStateValue } from '../StateProvider';
+import { 
+    auth,
+    provider 
+} from '../firebase';
+import { 
+    actionTypes 
+} from '../reducer';
+import { 
+    useStateValue 
+} from '../StateProvider';
 
+// interface
 interface Props{
 
 }
 
+// component
 const Login: React.FC<Props> = () => {
+    // using the custom hook to use the context
     const [state, dispatch] = useStateValue();
+
+    // using the authentication from firebase
     const SignIn = () => {
         auth.signInWithPopup(provider)
         .then(
@@ -29,6 +42,8 @@ const Login: React.FC<Props> = () => {
             alert(err.message)
         );
     }
+
+    // template
     return (
         <div
         className='login'
